@@ -2,13 +2,16 @@
 <script id="meetup-card" type="x-tmpl-mustache">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <a href="{{event.event_url}}" target="_blank">{{event.name}}</a>
+            {{event.name}}
         </div>
         <div class="panel-body">
             <div class="col-sm-8">
                 <p>{{{event.description}}}</p>
             </div>
             <div class="col-sm-4">
+                <a href="{{event.event_url}}" target="_blank" class="btn btn-default">Open in Meetup</a>
+                <br>
+                <br>
                 <b>WHEN:</b> {{event.formattedDate}}
                 <br><b>WHERE:</b> <a href="{{event.venueLink}}" target="_blank">{{event.venue.name}}</a>
                 <br><b>WHO:</b> {{event.yes_rsvp_count}} already going
