@@ -1,16 +1,10 @@
-$linkTeal     : #13c0d7;
-$colHighlight   : #0297AC;
-$theTeal: #13c0d7;
-$theBrownBackground: #E7DCD3;
-$textColor: #433A33;
+$brand-teal: #13c0d7;
+$brand-brown: #433A33;
+$brand-brown-light: #E7DCD3;
 
 .btn-teal {
   background: white;
-  border: 1px solid $theTeal;
-  box-shadow: 3px 3px;
-  &:active {
-    box-shadow: 0px 0px;
-  }
+  border: 2px solid $brand-teal;
 }
 
 .slightly-bold {
@@ -18,31 +12,36 @@ $textColor: #433A33;
 }
 
 .jumbotron {
-  background-color: $theBrownBackground;
-  border-bottom: 1px solid $theTeal;
+  background-color: $brand-brown-light;
+  border-bottom: 1px solid $brand-teal;
+  color: $brand-brown;
   p {
     font-size: 20px;
   }
 }
 
-.panel-default>.panel-heading {
-  font-weight: 500;
-  background-color: white;
+.panel-default {
+  border: 2px solid $brand-teal;
+  &>.panel-heading {
+    font-weight: 500;
+    background-color: $brand-brown-light;
+    border-bottom: 1px solid $brand-teal;
+  }
 }
 
 a {
-  color: $linkTeal;
+  color: $brand-brown;
   &:hover {
-    color: $colHighlight;
+    color: $;
   }
   &:visited {
-    color: $linkTeal;
+    color: $brand-brown;
   }
 }
 
 .navbar {
   margin-bottom: 0px;
-  border-bottom: 3px solid $theTeal;
+  border-bottom: 3px solid $brand-teal;
   height: 70px;
   a {
     font-size: 1.3em;
