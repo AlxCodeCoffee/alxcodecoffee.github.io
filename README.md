@@ -8,6 +8,7 @@ Feel free to fork or copy this repo :)
 - header (navbar)
 - banner
 - footer
+- `_config.yml`
 
 #### Meetup Widget Setup
 1. Get your Meetup API key from here: https://secure.meetup.com/meetup_api/key/
