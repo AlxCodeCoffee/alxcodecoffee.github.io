@@ -1,5 +1,13 @@
 $colDefault     : #13c0d7;
 $colHighlight   : #0297AC;
+$theBrownBackground: #E7DCD3;
+
+.jumbotron {
+  background-color: $theBrownBackground;
+}
+.panel-default>.panel-heading {
+  background-color: white;
+}
 
 a {
   color: $colDefault;
