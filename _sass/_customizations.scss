@@ -4,7 +4,8 @@ $theTeal: #13c0d7;
 $theBrownBackground: #E7DCD3;
 $textColor: #433A33;
 
-.btn {
+.btn-teal {
+  background: white;
   border: 1px solid $theTeal;
   box-shadow: 3px 3px;
   &:active {
@@ -25,7 +26,7 @@ a {
     color: $colHighlight
   }
   &:visited {
-    color: $textColor;
+    color: $linkTeal;
   }
 }
 
