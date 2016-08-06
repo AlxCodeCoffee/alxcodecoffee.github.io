@@ -4,8 +4,16 @@ $theTeal: #13c0d7;
 $theBrownBackground: #E7DCD3;
 $textColor: #433A33;
 
+.btn {
+  border: 1px solid $theTeal;
+  box-shadow: 3px 3px;
+  &:active {
+    box-shadow: 0px 0px;
+  }
+}
 .jumbotron {
   background-color: $theBrownBackground;
+  border-bottom: 1px solid $theTeal;
 }
 .panel-default>.panel-heading {
   background-color: white;
