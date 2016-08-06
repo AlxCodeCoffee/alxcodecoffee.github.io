@@ -1,6 +1,8 @@
-$colDefault     : #13c0d7;
+$linkTeal     : #13c0d7;
 $colHighlight   : #0297AC;
+$theTeal: #13c0d7;
 $theBrownBackground: #E7DCD3;
+$textColor: #433A33;
 
 .jumbotron {
   background-color: $theBrownBackground;
@@ -10,17 +12,19 @@ $theBrownBackground: #E7DCD3;
 }
 
 a {
-  color: $colDefault;
+  color: $linkTeal;
   &:hover {
     color: $colHighlight
+  }
+  &:visited {
+    color: $textColor;
   }
 }
 
 .navbar {
   margin-bottom: 0px;
-  border-bottom: 3px solid #13c0d7;
+  border-bottom: 3px solid $theTeal;
   height: 70px;
-
   a {
     font-size: 1.3em;
     font-weight: 500;
