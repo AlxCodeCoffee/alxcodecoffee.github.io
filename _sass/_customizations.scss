@@ -1,7 +1,20 @@
 $brand-teal: #13c0d7;
+$brand-teal-dark: #0299AE;
 $brand-brown: #433A33;
 $brand-brown-light: #E7DCD3;
 $slightly-bold: 500;
+
+a {
+  text-decoration: none;
+  color: $brand-teal;
+  &:visited {
+    color: $brand-teal;
+  }
+  &:hover {
+    color: $brand-teal-dark;
+    text-decoration: none;
+  }
+}
 
 .btn-teal {
   background: white;
@@ -27,16 +40,6 @@ $slightly-bold: 500;
     font-weight: $slightly-bold;
     background-color: $brand-brown-light;
     border-bottom: 1px solid $brand-teal;
-  }
-}
-
-a {
-  color: $brand-brown;
-  &:hover {
-    color: $;
-  }
-  &:visited {
-    color: $brand-brown;
   }
 }
 
