@@ -1,6 +1,7 @@
 $brand-teal: #13c0d7;
 $brand-brown: #433A33;
 $brand-brown-light: #E7DCD3;
+$slightly-bold: 500;
 
 .btn-teal {
   background: white;
@@ -8,7 +9,7 @@ $brand-brown-light: #E7DCD3;
 }
 
 .slightly-bold {
-  font-weight: 500;
+  font-weight: $slightly-bold;
 }
 
 .jumbotron {
@@ -23,7 +24,7 @@ $brand-brown-light: #E7DCD3;
 .panel-default {
   border: 2px solid $brand-teal;
   &>.panel-heading {
-    font-weight: 500;
+    font-weight: $slightly-bold;
     background-color: $brand-brown-light;
     border-bottom: 1px solid $brand-teal;
   }
@@ -45,7 +46,7 @@ a {
   height: 70px;
   a {
     font-size: 1.3em;
-    font-weight: 500;
+    font-weight: $slightly-bold;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
