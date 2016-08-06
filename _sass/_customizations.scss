@@ -12,18 +12,24 @@ $textColor: #433A33;
     box-shadow: 0px 0px;
   }
 }
+
 .jumbotron {
   background-color: $theBrownBackground;
   border-bottom: 1px solid $theTeal;
+  p {
+    font-size: 20px;
+  }
 }
+
 .panel-default>.panel-heading {
+  font-weight: 500;
   background-color: white;
 }
 
 a {
   color: $linkTeal;
   &:hover {
-    color: $colHighlight
+    color: $colHighlight;
   }
   &:visited {
     color: $linkTeal;
