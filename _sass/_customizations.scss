@@ -18,13 +18,23 @@ a {
 
 .navbar {
   margin-bottom: 0px;
-  // border-radius: 0px;
-  // background: white;
   border-bottom: 3px solid #13c0d7;
-  // height: 65px;
+  height: 70px;
+
   a {
     font-size: 1.3em;
     font-weight: 500;
     letter-spacing: 2px;
+    text-transform: uppercase;
   }
+  .titleUpper {
+    font-size: 20px;
+  }
+
+  .titleLower {
+    text-align: right;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
 }
