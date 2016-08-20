@@ -9,7 +9,7 @@
 <script type="text/javascript">
 //assume Mustache is loaded
 
-window.onload = function(){
+$(document).ready(function(){
   $('*[data-component="instagram-card-collection"]').each(function(){
     var componentConfiguration = {
       "domId": this.id,
@@ -46,5 +46,5 @@ window.onload = function(){
     var rendered = Mustache.render(template, {"image": image});
     $('#'+id).append(rendered);
   };
-}
+});
 </script>
