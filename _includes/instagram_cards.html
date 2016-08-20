@@ -25,7 +25,8 @@ $(document).ready(function(){
       jsonp: 'callback',
     }).done(
       function(results) {
-        results.data.forEach(function(instagramImage) {
+        var resultsToDisplay = results.data.slice(0, componentConfiguration.maxCards);
+        resultsToDisplay.forEach(function(instagramImage) {
           image = instagramImageFromPayloadItem(instagramImage);
           createAndAppendInstagramCard(componentConfiguration.domId, image);
         })
