@@ -17,7 +17,7 @@ window.onload = function(){
       "accessToken": $(this).data("access-token")
     };
 
-    var url = `https://api.instagram.com/v1/users/self/media/recent?access_token=${componentConfiguration.accessToken}`;
+    var url = 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + componentConfiguration.accessToken;
 
     $.ajax({
       url: url,
@@ -34,7 +34,7 @@ window.onload = function(){
   });
 
   function instagramImageFromPayloadItem(item) {
-    let instagramImage = {};
+    var instagramImage = {};
     instagramImage.link = item.link;
     instagramImage.url = item.images.standard_resolution.url;
     return instagramImage;
