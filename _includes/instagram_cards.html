@@ -11,7 +11,6 @@
 
 window.onload = function(){
   $('*[data-component="instagram-card-collection"]').each(function(){
-    console.log('gotit')
     var componentConfiguration = {
       "max": $(this).data("max-return"),
       "id": this.id,
@@ -29,7 +28,7 @@ window.onload = function(){
       function(results) {
         results.data.forEach(function(instagramImage) {
           image = instagramImageFromPayloadItem(instagramImage);
-          createInstagramCard(image);
+          createInstagramCard(componentConfiguration.id, image);
         })
       }
     )
@@ -41,11 +40,11 @@ window.onload = function(){
     return instagramImage;
   }
 
-  function createInstagramCard(image) {
+  function createInstagramCard(id, image) {
     var template = $('#instagram-card').html();
     Mustache.parse(template);   // optional, speeds up future uses
     var rendered = Mustache.render(template, {"image": image});
-    $('#'+componentConfiguration.id).append(rendered);
+    $('#'+id).append(rendered);
   };
 }
 </script>
