@@ -27,7 +27,7 @@ window.onload = function(){
       function(results) {
         results.data.forEach(function(instagramImage) {
           image = instagramImageFromPayloadItem(instagramImage);
-          createInstagramCard(componentConfiguration.domId, image);
+          createAndAppendInstagramCard(componentConfiguration.domId, image);
         })
       }
     )
@@ -40,7 +40,7 @@ window.onload = function(){
     return instagramImage;
   }
 
-  function createInstagramCard(id, image) {
+  function createAndAppendInstagramCard(id, image) {
     var template = $('#instagram-card').html();
     Mustache.parse(template);   // optional, speeds up future uses
     var rendered = Mustache.render(template, {"image": image});
