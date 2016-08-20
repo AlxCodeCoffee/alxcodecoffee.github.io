@@ -12,13 +12,12 @@
 window.onload = function(){
   $('*[data-component="instagram-card-collection"]').each(function(){
     var componentConfiguration = {
-      "max": $(this).data("max-return"),
-      "id": this.id,
-      "url": $(this).data("url")
+      "domId": this.id,
+      "maxCards": $(this).data("max-cards"),
+      "accessToken": $(this).data("access-token")
     };
 
-    var accessToken = '3402069349.1677ed0.a0bd49ca18c54f02bdde99815f365c9d';
-    var url = 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + accessToken;
+    var url = `https://api.instagram.com/v1/users/self/media/recent?access_token=${componentConfiguration.accessToken}`;
 
     $.ajax({
       url: url,
@@ -28,11 +27,12 @@ window.onload = function(){
       function(results) {
         results.data.forEach(function(instagramImage) {
           image = instagramImageFromPayloadItem(instagramImage);
-          createInstagramCard(componentConfiguration.id, image);
+          createInstagramCard(componentConfiguration.domId, image);
         })
       }
     )
   });
+
   function instagramImageFromPayloadItem(item) {
     let instagramImage = {};
     instagramImage.link = item.link;
