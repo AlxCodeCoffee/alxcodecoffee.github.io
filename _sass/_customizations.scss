@@ -79,14 +79,9 @@ a {
 }
 
 .instagram-image-container {
-  height: 150px;
-  display: block;
-  white-space: nowrap;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .instagram-image {
