@@ -83,12 +83,13 @@ a {
   display: block;
   white-space: nowrap;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   display: flex;
   justify-content: space-between;
 }
 
 .instagram-image {
+  flex-shrink: 0;
   height: 150px;
 }
