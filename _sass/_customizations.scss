@@ -84,7 +84,11 @@ a {
   flex-wrap: wrap;
 }
 
-.instagram-image {
+.instagram-image-link {
   flex-shrink: 0;
+  text-align: center;
+}
+
+.instagram-image {
   height: 150px;
 }
