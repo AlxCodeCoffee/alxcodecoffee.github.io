@@ -77,3 +77,18 @@ a {
   }
 
 }
+
+.instagram-image-container {
+  height: 150px;
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.instagram-image {
+  height: 150px;
+}

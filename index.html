@@ -6,15 +6,19 @@ layout: default
 
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-12">
+      {% include images.html %}
+    </div>
+  </div>
+
+  <div style="margin:50px;"></div>
+
+  <div class="row">
+    <div class="col-md-6">
       {% include events.html %}
     </div>
 
-    <div class="col-md-4">
-      {% include images.html %}
-    </div>
-
-    <div class="col-md-5">
+    <div class="col-md-6">
       {% include twitter_widget.html %}
     </div>
   </div>
