@@ -1,0 +1,51 @@
+{% raw  %}
+<script id="instagram-card" type="x-tmpl-mustache">
+  <a class="instagram-image" href="{{image.link}}">
+    <img class="instagram-image" src={{image.url}}>
+  </a>
+</script>
+{% endraw  %}
+
+<script type="text/javascript">
+//assume Mustache is loaded
+
+$(document).ready(function(){
+  $('*[data-component="instagram-card-collection"]').each(function(){
+    var componentConfiguration = {
+      "domId": this.id,
+      "maxCards": $(this).data("max-cards"),
+      "accessToken": $(this).data("access-token")
+    };
+
+    var url = 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + componentConfiguration.accessToken;
+
+    $.ajax({
+      url: url,
+      dataType: 'jsonp',
+      jsonp: 'callback',
+    }).done(
+      function(results) {
+        var resultsToDisplay = results.data.slice(0, componentConfiguration.maxCards);
+        resultsToDisplay.forEach(function(instagramImage) {
+          image = instagramImageFromPayloadItem(instagramImage);
+          createAndAppendInstagramCard(componentConfiguration.domId, image);
+        })
+      }
+    )
+  });
+
+  function instagramImageFromPayloadItem(item) {
+    var instagramImage = {};
+    instagramImage.link = item.link;
+    instagramImage.url = item.images.standard_resolution.url;
+    return instagramImage;
+  }
+
+  function createAndAppendInstagramCard(id, image) {
+    var template = $('#instagram-card').html();
+    Mustache.parse(template);   // optional, speeds up future uses
+    var rendered = Mustache.render(template, {"image": image});
+    $('#'+id).append(rendered);
+  };
+});
+</script>

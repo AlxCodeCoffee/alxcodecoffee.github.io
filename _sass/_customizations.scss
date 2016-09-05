@@ -77,3 +77,14 @@ a {
   }
 
 }
+
+.instagram-image-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.instagram-image {
+  flex-shrink: 0;
+  height: 150px;
+}
