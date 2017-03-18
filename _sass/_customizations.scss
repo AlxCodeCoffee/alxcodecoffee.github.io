@@ -96,3 +96,14 @@ a {
 .tc {
   text-align: center;
 }
+
+.sponsor {
+  display: inline-block;
+  margin: 15px;
+  height: 55px;
+  width: auto;
+  img {
+    height: 55px;
+    width: auto;
+  }
+}
