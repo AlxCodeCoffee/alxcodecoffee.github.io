@@ -41,7 +41,6 @@ $(document).ready(function(){
     instagramImage.url = item.images.standard_resolution.url;
     var date = new Date(parseInt(item.created_time) * 1000);
     instagramImage.formattedDate = formatDate(date);
-    debugger;
     return instagramImage;
   }
 
