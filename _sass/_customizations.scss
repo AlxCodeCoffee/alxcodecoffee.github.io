@@ -107,3 +107,10 @@ a {
     width: auto;
   }
 }
+
+.flex {
+  display: flex;
+}
+.flex-auto {
+  flex: 1 1 auto;
+}
