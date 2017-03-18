@@ -5,16 +5,14 @@
             {{event.name}}
         </div>
         <div class="panel-body">
-            <div class="col-sm-8">
-                <p>{{{event.description}}}</p>
-            </div>
             <div class="col-sm-4">
-                <a href="{{event.event_url}}" target="_blank" class="btn btn-default">Open in Meetup</a>
-                <br>
-                <br>
+                <p class="tc">RSVP on <a href="{{event.event_url}}" target="_blank" class="btn btn-default">Meetup.com</a></p>
                 <b>WHEN:</b> {{event.formattedDate}}
                 <br><b>WHERE:</b> <a href="{{event.venueLink}}" target="_blank">{{event.venue.name}}</a>
                 <br><b>WHO:</b> {{event.yes_rsvp_count}} already going
+            </div>
+            <div class="col-sm-8">
+                <p>{{{event.description}}}</p>
             </div>
         </div>
     </div>
