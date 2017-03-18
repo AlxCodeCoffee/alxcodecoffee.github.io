@@ -5,7 +5,10 @@ $brand-brown-light: #E7DCD3;
 $slightly-bold: 500;
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  &.btn {
+    text-decoration: none;
+  }
   color: $brand-teal;
   &:visited {
     color: $brand-teal;
