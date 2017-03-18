@@ -5,11 +5,11 @@
             {{event.name}}
         </div>
         <div class="panel-body">
-            <div class="col-sm-4">
-                <p class="tc">RSVP on <a href="{{event.event_url}}" target="_blank" class="btn btn-default">Meetup.com</a></p>
-                <b>WHEN:</b> {{event.formattedDate}}
-                <br><b>WHERE:</b> <a href="{{event.venueLink}}" target="_blank">{{event.venue.name}}</a>
-                <br><b>WHO:</b> {{event.yes_rsvp_count}} already going
+            <div class="col-sm-4 tc">
+                <div><p>RSVP on <a href="{{event.event_url}}" target="_blank" class="btn btn-default">Meetup.com</a></p></div>
+                <div style="margin-top:10px;">{{event.formattedDate}}</div>
+                <div style="margin-top:10px;">at <a href="{{event.venueLink}}" target="_blank">{{event.venue.name}}</a></div>
+                <div style="margin-top:10px;"> {{event.yes_rsvp_count}} already going</div>
             </div>
             <div class="col-sm-8">
                 <p>{{{event.description}}}</p>
@@ -82,9 +82,7 @@ window.onload = function(){
 
         return day[date.getDay()]  + ', '
         + months[date.getMonth()] + ' '
-        + date.getDate() + ', '
-        + date.getFullYear()
-        + ' at '
+        + date.getDate() + ' '
         + (date.getHours() % 12) + ':'
         + (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes())
         + ' '
