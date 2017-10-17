@@ -1,5 +1,5 @@
-# novacodecoffee.github.io
-The Official Nova Code &amp; Coffee Website.
+# dccodecoffee.github.io
+The Official DC Code &amp; Coffee Website.
 
 ### I want a site like this!
 Feel free to fork or copy this repo :)
