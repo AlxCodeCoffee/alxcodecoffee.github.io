@@ -22,3 +22,11 @@ Feel free to fork or copy this repo :)
 1. https://publish.twitter.com (https://twitter.com/settings/widgets)
 2. Put in the url like twitter.com/alxcodecoffee
 2. make the height ~800px or something like that
+
+## Run locally
+
+You'll need ruby installed.
+
+1. Run `bundle install`
+1. Run `jekyll serve`
+1. Navigate to <http://127.0.0.1:4000/>
